@@ -5,6 +5,10 @@ Django library that allows for effortless caching and invalidation of models.
 
 Dependent on Redis
 
+# Install
+
+pip install django-moneyclip
+
 
 # Decorator
 
