@@ -26,7 +26,9 @@ class CacheMixin(models.Model):
         # Remove any cached foreign keys
         for field in self._meta.fields:
             if isinstance(field, CachedForeignKey):
-                delattr(self, '_%s_cache' % (field.name,))
+                cache_name = '_%s_cache' % (field.name,)
+                if hasattr(self, cache_name):
+                    delattr(self, cache_name)
 
         self.__class__.set_cache(self, id=self.id)
 
