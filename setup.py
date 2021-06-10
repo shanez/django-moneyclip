@@ -41,7 +41,7 @@ setup(
     url='https://github.com/shanez/MoneyClip',
     description='Django library that allows for effortless caching and invalidation of models and functions based on signals.  Depedent on Redis',
     install_requires=[
-        "Django==1.6.2",
+        "Django==2.2.24",
         "django-redis-cache==0.10.2"
         ]
 )
